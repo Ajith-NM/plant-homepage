@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Explora&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 500;
+    font-style: normal
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .left {
+    margin-left: 30px;
+}
+
+header .logo img {
+    width: 80px;
+    height: 60px;
+    transition: .5s;
+}
+header .middle a {
+    text-decoration: none;
+    text-transform: capitalize;
+    margin: 0 30px;
+    font-family: "poppins";
+    color: black;
+    display: inline-block;
+    position: relative;
+    transition: .2s;
+}
+
+header .middle a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    transform: scale(0, 0);
+    background-color: rgb(9, 137, 92);
+    border-radius: 20px;
+    transition: .5s ease;
+}
+
+header .middle a:hover::after{
+    transform: scale(1, 1);
+}
+
+header .right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px;
+}
+
+header .right .icon {
+    margin: 0 17px;
+    transition: .3s;
+}
+
+header .right .menu {
+    display: none;
+}
+
+header .right .icon:hover {
+    color: rgb(9, 137, 92);
+    transform: scale(1.1);
+
+}
+
+section {
+    width: 100%;
+    height: 91vh;
+}
+
+section img {
+    position: absolute;
+    height: 105vh;
+    right: 0vh;
+    bottom: -18vh;
+    transition: .5s;
+}
+
+section img:hover {
+    filter: drop-shadow(-10px -10px 20px rgba(40, 97, 69, 0.3));
+}
+
+section .contents {
+    position: relative;
+    top: 15vh;
+    left: 5vw;
+    width: 550px;
+    max-width: 80%;
+    z-index: 1;
+
+}
+
+section .contents h2 {
+    width: fit-content;
+    height: fit-content;
+    font-size: 4.4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 14px;
+    position: relative;
+    transition: .3s;
+}
+
+section .contents p {
+    transition: .5s;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+section .contents button {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(13, 79, 57);
+    border: 1px solid rgba(240, 248, 255, 0.645);
+    width: 195px;
+    height: 40px;
+    font-size: 1.1rem;
+    margin: 40px 0 10px 20px;
+    padding-left: 15px;
+    border-radius: 13px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    transition: .5s;
+}
+
+section .contents button i {
+    font-size: 30px;
+}
+
+section .bottom {
+    position: absolute;
+    bottom: 6vh;
+    left: 3vw;
+    width: fit-content;
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+    row-gap: 10px;
+    z-index: 1;
+}
+
+section .bottom .feeding {
+    height: 80px;
+    display: grid;
+    grid-template-columns: 70px 200px;
+    overflow: hidden;
+    transition: .3s;
+    backdrop-filter: blur(5px);
+}
+
+section .bottom .feeding:hover,
+section .contents button:hover,
+section .contents h2:hover,
+header .middle a:hover,
+header .logo img:hover {
+    transform: scale(1.1);
+    
+}
+section .contents p:hover{
+    transform: translateX(5px);
+}
+section .contents h2:hover{
+    color: transparent;
+    -webkit-text-stroke: 2px green;
+    transform: translateX(5px);
+}
+section .bottom .feeding .image {
+    position: relative;
+
+    margin-right: 5px;
+    overflow: hidden;
+}
+
+section .bottom .feeding .image img {
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 90px;
+    z-index: 7;
+}
+
+section .bottom .feeding .image img:nth-child(odd) {
+    top: -10px;
+}
+
+section .bottom .feeding .text p {
+    font-size: smaller;
+}
+
+@media(max-width:1400px) {
+    section .bottom {
+        width: 60%;
+    }
+
+    section .bottom .feeding {
+        height: 60px;
+        display: grid;
+        grid-template-columns: 60px 1fr;
+        overflow: hidden;
+        transition: .3s;
+    }
+
+    section .bottom .feeding .text p {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    section .bottom .feeding .image img {
+        position: absolute;
+        top: 0;
+        width: 50px;
+        height: 70px;
+        z-index: 7;
+    }
+}
+
+@media(max-width:1260px) {
+    section .bottom {
+        width: 58%;
+        bottom: 3vh;
+        grid-template-columns: repeat(auto-fit, 190px);
+    }
+}
+
+@media(max-width:1030px) {
+    header .middle a {
+        margin: 0 10px;
+    }
+
+    section .contents {
+        left: 3vw;
+        width: 400px;
+    }
+
+    section .contents h2 {
+        font-size: 4rem;
+        letter-spacing: 10px;
+    }
+
+    section .contents p {
+        font-size: 16px;
+    }
+
+    section .contents button {
+        width: 168px;
+        height: 37px;
+        font-size: 1rem;
+        padding-left: 10px;
+
+    }
+
+    section .contents button i {
+        font-size: 25px;
+    }
+
+}
+
+@media(max-width:850px) {
+    header .right {
+        margin-right: 20px;
+    }
+
+    header .right .menu {
+        display: inline-block;
+    }
+
+    header .right .icon {
+        margin: 0 10px;
+    }
+
+    header .middle {
+        display: none;
+    }
+    section .contents {
+        left: 5vw;
+
+    }
+
+    section img {
+        height: 60vh;
+        position: absolute;
+
+        right: 0vh;
+        bottom: -60px;
+
+        transition: .5s;
+    }
+}
+@media(max-width:670px){
+    section .bottom{
+        display: none;
+    }
+}
+@media(max-width:450px) {
+    header .right .icon {
+        margin: 0 5px;
+    }
+    section .contents {
+        left: 7vw;
+        width: 300px;
+    }
+
+    section .contents h2 {
+        font-size: 2.8rem;
+        letter-spacing: 10px;
+    }
+
+    section .contents p {
+        font-size: 14px;
+    }
+}
