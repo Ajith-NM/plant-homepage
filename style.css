@@ -216,7 +216,7 @@ section .bottom .feeding .text p {
     }
 
     section .bottom .feeding {
-        height: 60px;
+        height: 70px;
         display: grid;
         grid-template-columns: 60px 1fr;
         overflow: hidden;
@@ -240,7 +240,7 @@ section .bottom .feeding .text p {
 @media(max-width:1260px) {
     section .bottom {
         width: 58%;
-        bottom: 3vh;
+        bottom: 5vh;
         grid-template-columns: repeat(auto-fit, 190px);
     }
 }
